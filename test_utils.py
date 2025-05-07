@@ -32,3 +32,8 @@ def test_multiply(a, b, expected):
 def test_divide(a, b, expected):
     result = utils.divide(a, b)
     assert result == expected
+
+@pytest.mark.parametrize("a, expected", [(2, "10"), (10, "1010"), (0, "0")])
+def test_divide(a, expected):
+    result = utils.binary_conversion(a)
+    assert result == expected
