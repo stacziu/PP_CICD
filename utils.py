@@ -1,7 +1,6 @@
 """
 Exemplary calculator functions
 """
-from tokenize import String
 
 
 def add(a: int, b: int) -> int:
@@ -27,15 +26,17 @@ def divide(a: int, b: int) -> float:
 
     return a / b
 
+
 def binary_conversion(a) -> str:
-    if  a < 0 or a > 100:
+    """Converting integer to binary"""
+    if a < 0 or a > 100:
         raise ValueError("Not in range")
-    if type(a) != int:
+    if not isinstance(a, int):
         raise ValueError("Not an integer")
 
     if a == 0:
         return "0"
-    res = ''
+    res = ""
     while a > 0:
         res = str(a % 2) + res
         a //= 2
