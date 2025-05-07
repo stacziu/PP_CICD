@@ -25,5 +25,3 @@ def divide(a: int, b: int) -> float:
     """Division of two numbers"""
 
     return a / b
-
-def convert
